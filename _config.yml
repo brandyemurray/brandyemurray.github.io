@@ -23,7 +23,7 @@ avatar_image: /img/HeadShot.jpg
 #-------------------------------
 # Contact links
 linkedln: "https://www.linkedin.com/in/brandyemurray" # Add your linkedln handle
-github: "https://brandyemurray.github.io/Power-BI.github.io/"  # Add your github handle
+github: "https://github.com/brandyemurray"  # Add your github handle
 
 paginate: 6
 paginate_path: "/page/:num"
