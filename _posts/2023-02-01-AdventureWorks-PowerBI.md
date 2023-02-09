@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Creating a Power BI Dashboard
-image: "img/posts/AW_Dashboard_Exec_Summary.jpg"
+image: "/posts/AW_Dashboard_Exec_Summary.jpg"
 tags: [PowerBI, Data Analysis]
 ---
 
