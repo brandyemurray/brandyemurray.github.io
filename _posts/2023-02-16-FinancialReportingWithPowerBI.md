@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Financial Reporting 
-image: "/posts/AlteredPowerBILogo.jpg"
+image: "/posts/FinancialReportNavigation.jpg"
 tags: [PowerBI, Data Analysis]
 ---
 
