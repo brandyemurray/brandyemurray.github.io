@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating a Power BI Dashboard
+title: Financial Reporting 
 image: "/posts/AlteredPowerBILogo.jpg"
 tags: [PowerBI, Data Analysis]
 ---
