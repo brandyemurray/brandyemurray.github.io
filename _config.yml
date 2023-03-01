@@ -10,7 +10,7 @@ plugins:
 # General Site Settings
 title: Brandy Murray
 description: Thank you for visiting my website! I started my career off in finance but always wished I knew more about data analysis and how I could answer the question, "Why". This is when I decided to roll up my sleeves to earn my Master's degree in Business Data Analytics. Throughout my experience, I have developed a strong influential voice that leads with empathy and passion. Below you will find my portfolio which focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Be sure to check back as I continually update this page with new projects. If you would like to see a list of projects just click on any tag below a project.   
-baseurl: "If you would like to see a list of projects just click on any tag below a project." # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
