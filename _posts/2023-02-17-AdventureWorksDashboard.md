@@ -7,7 +7,27 @@ tags: [PowerBI, Data Analysis]
 
 
 Testing out what texts looks like with the iframe report. 
-<div class="iframe_container">
-  <iframe width="1094" height="1494" src="https://app.powerbi.com/view?r=eyJrIjoiNDUwN2FjY2UtNmM4My00MGE3LThjYmUtZTE4MGJkMTgxMTFiIiwidCI6IjAwM2Q0MTg3LWU2NTgtNDU5ZS1hN2JmLTJiNWE5YWNlMjQ2YSIsImMiOjZ9" frameborder="0" allowfullscreen></iframe>
+
+<style>
+.container {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding-top: 56.25%; /* 16:9 Aspect Ratio */
+}
+
+.responsive-iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+  <div class="container"> 
+  <iframe class="responsive-iframe" src="https://www.youtube.com/embed/tgbNymZ7vqY"></iframe>
 </div>
 Testing text below the iframe. 
