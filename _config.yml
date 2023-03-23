@@ -15,7 +15,7 @@ url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
-subtitle: <font size=5> DATA SCIENTIST – </font> <font size=3> Extracting meaning from Big Data to move people and businesses forward </font>
+subtitle: <font size=4> DATA SCIENTIST – </font> <font size=4> Extracting meaning from Big Data to move people and businesses forward </font>
 location: "Helena, MT"
 resume_url: /docs/Murray_Brandy_Resume.pdf
 avatar_image: /img/HeadShot.jpg
