@@ -9,13 +9,13 @@ plugins:
 #-------------------------------
 # General Site Settings
 title: Brandy Murray
-description: Thank you for visiting my website! I started my career off in finance but always wished I knew more about data analysis and how I could answer the question, "Why". This is when I decided to roll up my sleeves to earn my Master's degree in Business Data Analytics. Throughout my experience, I have developed a strong influential voice that leads with empathy and passion. Below you will find my portfolio which focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Be sure to check back as I continually update this page with new projects. If you would like to see a list of projects just click on any tag below a project.   
+description: <font size=3> Thank you for visiting my website! I started my career off in finance but always wished I knew more about data analysis and how I could answer the question, "Why". This is when I decided to roll up my sleeves to earn my Master's degree in Business Data Analytics. Throughout my experience, I have developed a strong influential voice that leads with empathy and passion. Below you will find my portfolio which focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Be sure to check back as I continually update this page with new projects. If you would like to see a list of projects just click on any tag below a project. </font>  
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 #-------------------------------
 # About Section
-subtitle: <font size=4> DATA SCIENTIST – </font> <font size=4> Extracting meaning from Big Data to move people and businesses forward </font>
+subtitle: <font size=4> DATA SCIENTIST – Extracting meaning from Big Data to move people and businesses forward </font>
 location: "Helena, MT"
 resume_url: /docs/Murray_Brandy_Resume.pdf
 avatar_image: /img/HeadShot.jpg
