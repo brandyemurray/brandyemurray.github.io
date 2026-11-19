@@ -1,31 +1,54 @@
-# Most recent first. Shown on the home page; full detail lives in the resume.
-- years: "2025 – 2026"
-  role: Data Architect
+# Most recent first, matching the resume. Full detail lives in the resume PDF.
+- years: "2026 – now"
+  role: Architect
   org: evolv Consulting
   summary: >-
-    Designed a governed, multi-bureau credit data platform on Snowflake for a
-    fintech client, from architecture guide to build stories, and built
-    Snowflake Cortex and Power BI solutions for healthcare pursuits.
+    Lead architect for a Snowflake credit bureau data platform for SoFi, covering
+    about 220M consumers a month with privacy-by-design identity and governed data
+    products. Co-led an AI prior-authorization readiness agent built on Snowflake
+    Cortex, with retrieval over reviewed policy and every answer validated.
+
+- years: "2026"
+  role: Senior Solutions Architect
+  org: Safe Schools for Alex
+  summary: >-
+    Sole architect and engineer for a national school safety platform that compares
+    about 100,000 schools, built on a three-layer Snowflake warehouse with a Python
+    ETL pipeline, a FastAPI backend and a React frontend.
+
+- years: "2024 – 2026"
+  role: Data Modeler and Data Warehouse Architect
+  org: State of Montana, Chief Data Office
+  summary: >-
+    Snowflake solutions for 19+ state agencies, including a Cortex AI agent that lets
+    HHS analysts question 36M+ call records in plain English under row-level security,
+    a governance-tagging tool any agency can run, and Streamlit apps for usage
+    forecasting and Medicaid data model comparison.
+
+- years: "2024 – 2026"
+  role: Chief Data Officer (fractional)
+  org: Finology Software
+  summary: >-
+    Owned data strategy and product architecture for a fintech platform that helps
+    financial advisors model federal student loan repayment scenarios.
 
 - years: "2021 – 2023"
   role: Capacity Planning Engineer
   org: Salesforce
   summary: >-
-    Built a forecasting calculator with data science that improved migration
-    load projections by 15%, and Tableau KPI dashboards that projected a 10%
-    cost reduction.
+    Defined the data and metric architecture for Hyperforce capacity planning and
+    built an ML-assisted forecasting calculator with the data science team.
 
 - years: "2019 – 2022"
-  role: Management Consultant
+  role: Solutions Architect, Data and Analytics
   org: Lone Peak Data Analytics
   summary: >-
-    Used k-means clustering to reshape a client's marketing, driving a 45%
-    year-over-year revenue increase.
+    Designed Snowflake and BI platforms for clients, and used k-means clustering to
+    reshape one client's marketing, driving a 45% year-over-year revenue increase.
 
-- years: "2011 – 2019"
-  role: Finance and operations leadership
-  org: Montana State University, Huntsman Cancer Institute, Western Transportation Institute
+- years: "2008 – 2019"
+  role: Finance and research administration
+  org: Montana State University and Huntsman Cancer Institute
   summary: >-
-    Managed a $30M budget and a team of 10, cut payroll costs 30% through
-    planning, and helped win a $100M federal award.
-
+    Managed a $30M budget and a team of 10, and chaired a planning committee that cut
+    payroll costs 30%. Where I learned to ask what the numbers mean.

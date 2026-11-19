@@ -1,10 +1,10 @@
 #-------------------------------
 # Site
 title: Brandy Murray
-tagline: Analytics engineer
+tagline: Data and AI platform architect
 description: >-
-  Brandy Murray is an analytics engineer in Helena, Montana who builds governed
-  data platforms on Snowflake and Power BI, and does the data science on top.
+  Brandy Murray is a data and AI platform architect in Helena, Montana who designs
+  governed Snowflake platforms, semantic layers, AI agents and Power BI reporting.
 url: "https://brandyemurray.github.io"
 baseurl: ""
 lang: en

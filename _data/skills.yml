@@ -1,10 +1,10 @@
-- group: Data engineering
-  items: Snowflake, SQL, layered ELT, dimensional modeling, data quality monitoring, Git
-- group: Governance
-  items: Tag-based masking, row-level security, role design, data cataloging
-- group: Analytics and BI
-  items: Power BI, DAX, Power Query, Tableau, KPI design, executive dashboards
-- group: Data science
-  items: Python, pandas, scikit-learn, deep learning, clustering, causal impact analysis
+- group: Platform
+  items: Snowflake architecture, Snowpark, layered data models, dbt, Data Vault, data contracts
 - group: AI
-  items: Snowflake Cortex, semantic views, AI-assisted development with Claude Code
+  items: Snowflake Cortex AI, Cortex Analyst, Cortex Search, semantic layers, agent guardrails, evaluation sets
+- group: Governance
+  items: Tag-based masking, row-level security, RBAC, privacy-by-design, data classification, lineage
+- group: Engineering
+  items: Python, SQL, Streamlit, FastAPI, React, Git, CI/CD, automated testing
+- group: Analytics
+  items: Power BI, DAX, Tableau, dimensional modeling, machine learning, causal impact analysis
