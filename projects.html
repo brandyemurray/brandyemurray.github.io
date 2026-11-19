@@ -1,0 +1,19 @@
+---
+layout: page
+title: All projects
+permalink: /projects/
+---
+<h1 class="page-title">All projects</h1>
+<p class="section-intro">Everything I've written up, newest first.</p>
+{% assign years = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
+{% for year in years %}
+<h2 class="year">{{ year.name }}</h2>
+<ul class="archive">
+  {% for post in year.items %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.tags.size > 0 %}<span class="archive-tags">{{ post.tags | join: ', ' }}</span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+{% endfor %}

@@ -1,15 +1,123 @@
 ---
 layout: default
+body_class: home
+title: Analytics engineer
 ---
-<div class="container">
-    <div class="row">
-        <div class="col col-12 col-t-12">
-            <div class="row">
-                {% for post in paginator.posts %}
-                    {% include post-card.html %}
-                {% endfor %}
-            </div>
-            {% include pagination.html %}
-        </div>
+{% assign featured = site.posts | where: "featured", true | first %}
+{% assign ds_posts = site.posts | where: "ds_featured", true %}
+
+<section class="hero wrap">
+  <div class="hero-text">
+    <img class="avatar" src="{{ site.avatar_image | relative_url }}" alt="Brandy Murray" width="88" height="88">
+    <h1>I take data from raw to decision&#8209;ready.</h1>
+    <p class="hero-intro">I'm an analytics engineer in Helena, Montana. I build governed data platforms on Snowflake and Power BI, then do the data science on top. I started in finance, wanting to answer the question "why" with data, and I still lead with that question.</p>
+    <p class="hero-actions">
+      <a class="button button-primary" href="{{ featured.url | relative_url }}">Read my latest case study</a>
+      <a class="button" href="{{ site.resume_url | relative_url }}">Download my resume</a>
+    </p>
+  </div>
+
+  <figure class="lineage" aria-label="Pipeline from my latest project">
+    <ol>
+      <li style="--i:0">
+        <span class="stage">Source files</span>
+        <span class="count">45,040</span>
+        <span class="note">rows across six extracts, problems included</span>
+      </li>
+      <li style="--i:1">
+        <span class="stage">Staging</span>
+        <span class="count">45,000</span>
+        <span class="note">visits after 40 duplicates removed and 269 issues flagged</span>
+      </li>
+      <li style="--i:2">
+        <span class="stage">Star schema</span>
+        <span class="count">7</span>
+        <span class="note">governed tables with masking and row-level security</span>
+      </li>
+      <li style="--i:3">
+        <span class="stage">Dashboard</span>
+        <span class="count">6</span>
+        <span class="note">KPIs, every one reconciled back to the source</span>
+      </li>
+    </ol>
+    <figcaption>The pipeline behind my latest project, counted at every step.</figcaption>
+  </figure>
+</section>
+
+{% if featured %}
+<section class="featured" id="work">
+  <div class="wrap">
+    <h2>Latest project</h2>
+    <a class="featured-image" href="{{ featured.url | relative_url }}">
+      <img src="{{ featured.image | prepend: '/img' | relative_url }}" alt="Executive dashboard from the {{ featured.title }} project">
+    </a>
+    <div class="featured-body">
+      <div>
+        <h3><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h3>
+        <p>{{ featured.summary }}</p>
+      </div>
+      <ul class="featured-facts">
+        {% for fact in featured.facts %}<li>{{ fact }}</li>{% endfor %}
+      </ul>
     </div>
-</div>
+    <p class="featured-links">
+      <a href="{{ featured.url | relative_url }}">Read the case study</a>
+      {% if featured.repo %}<a href="{{ featured.repo }}">See the code on GitHub</a>{% endif %}
+      {% if featured.notebook %}<a href="{{ featured.notebook }}">Open the walkthrough notebook</a>{% endif %}
+      {% if featured.slides %}<a href="{{ featured.slides | relative_url }}">Flip through the slides (PDF)</a>{% endif %}
+    </p>
+  </div>
+</section>
+{% endif %}
+
+<section class="ds wrap" id="data-science">
+  <h2>Data science</h2>
+  <p class="section-intro">Machine learning projects from my data science training, each written up from business question to result.</p>
+  <ul class="ds-list">
+    {% for post in ds_posts %}
+    <li>
+      <a class="ds-item" href="{{ post.url | relative_url }}">
+        <img src="{{ post.image | prepend: '/img' | relative_url }}" alt="" loading="lazy">
+        <span class="ds-text">
+          <span class="ds-title">{{ post.title }}</span>
+          <span class="ds-excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="more"><a href="{{ '/projects/' | relative_url }}">See all projects</a></p>
+</section>
+
+<section class="experience wrap" id="experience">
+  <h2>Experience</h2>
+  <ol class="timeline">
+    {% for job in site.data.experience %}{% if job.role %}
+    <li>
+      <span class="years">{{ job.years }}</span>
+      <div>
+        <h3>{{ job.role }}, <span class="org">{{ job.org }}</span></h3>
+        <p>{{ job.summary }}</p>
+      </div>
+    </li>
+    {% endif %}{% endfor %}
+  </ol>
+
+  <div class="two-col">
+    <div>
+      <h3 class="minor">Skills</h3>
+      <dl class="skills">
+        {% for s in site.data.skills %}
+        <dt>{{ s.group }}</dt><dd>{{ s.items }}</dd>
+        {% endfor %}
+      </dl>
+    </div>
+    <div>
+      <h3 class="minor">Education</h3>
+      <ul class="education">
+        <li><strong>M.S., Business Data Analytics</strong><br>Maryville University of St. Louis</li>
+        <li><strong>B.S., Finance, and B.S., Economics</strong><br>Montana State University</li>
+      </ul>
+    </div>
+  </div>
+</section>

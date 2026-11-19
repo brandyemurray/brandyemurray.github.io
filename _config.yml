@@ -1,54 +1,43 @@
-# Remote theme directory
-remote_theme: analytics-link/analytics-link.github.io
-
-plugins:
-  - jekyll-paginate
-  - jekyll-sitemap
-  - jekyll-remote-theme
-
 #-------------------------------
-# General Site Settings
+# Site
 title: Brandy Murray
-description: <font size=3> Thank you for visiting my website! I started my career off in finance but always wished I knew more about data analysis and how I could answer the question, "Why". This is when I decided to roll up my sleeves to earn my Master's degree in Business Data Analytics. Throughout my experience, I have developed a strong influential voice that leads with empathy and passion. Below you will find my portfolio which focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact. Be sure to check back as I continually update this page with new projects. If you would like to see a list of projects just click on any tag below a project. </font>  
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+tagline: Analytics engineer
+description: >-
+  Brandy Murray is an analytics engineer in Helena, Montana who builds governed
+  data platforms on Snowflake and Power BI, and does the data science on top.
+url: "https://brandyemurray.github.io"
+baseurl: ""
+lang: en
 
-#-------------------------------
-# About Section
-subtitle: <font size=4> Obstacles within a project can turn into opportunities for innovation </font>
-location: "Helena, MT"
-resume_url: /doc/Brandy Murray Resume.pdf
+author:
+  name: Brandy Murray
+  location: Helena, Montana
+  email: brandyemurray@gmail.com
+  linkedin: "https://www.linkedin.com/in/brandyemurray"
+  github: "https://github.com/brandyemurray"
+
+resume_url: "/doc/Brandy Murray Resume.pdf"
 avatar_image: /img/HeadShot.jpg
 
 #-------------------------------
-# Contact links
-linkedln: "https://www.linkedin.com/in/brandyemurray" # Add your linkedln handle
-github: "https://github.com/brandyemurray"  # Add your github handle
+# Build
+markdown: kramdown
+kramdown:
+  input: GFM
+  syntax_highlighter: rouge
 
-paginate: 6
-paginate_path: "/page/:num"
-
-sass:
-  sass_dir: _sass
-  style: compressed # possible values: nested expanded compact compressed
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
 
 defaults:
   - scope:
       type: posts
     values:
       layout: post
-      read_time: true
-      share: false
 
-
-#-------------------------------
-# Exclude from processing.
-# exclude:
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
-
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

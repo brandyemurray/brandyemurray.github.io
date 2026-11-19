@@ -1,6 +1,6 @@
-group :jekyll_plugins do
-  gem "jekyll-remote-theme"
-  gem "jekyll-paginate"
-  gem "jekyll-sitemap"
-  gem "github-pages"
-end
+source "https://rubygems.org"
+
+# Matches the versions GitHub Pages uses. Only needed to preview locally:
+#   bundle install && bundle exec jekyll serve
+gem "github-pages", group: :jekyll_plugins
+gem "webrick"

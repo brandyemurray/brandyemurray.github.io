@@ -1,4 +1,5 @@
 ---
+ds_featured: true
 layout: post
 title: The "You Are What You Eat" Customer Segmentation
 image: "/posts/clustering-title-img.png"

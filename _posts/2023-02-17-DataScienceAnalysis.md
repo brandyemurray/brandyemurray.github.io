@@ -1,4 +1,5 @@
 ---
+published: false
 layout: post
 title: Using Power BI for Advanced Analytical Techniques 
 image: "/posts/DataScienceAnalysis.png"

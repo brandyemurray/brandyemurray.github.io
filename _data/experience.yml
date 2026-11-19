@@ -1,0 +1,31 @@
+# Most recent first. Shown on the home page; full detail lives in the resume.
+- years: "2025 – 2026"
+  role: Data Architect
+  org: evolv Consulting
+  summary: >-
+    Designed a governed, multi-bureau credit data platform on Snowflake for a
+    fintech client, from architecture guide to build stories, and built
+    Snowflake Cortex and Power BI solutions for healthcare pursuits.
+
+- years: "2021 – 2023"
+  role: Capacity Planning Engineer
+  org: Salesforce
+  summary: >-
+    Built a forecasting calculator with data science that improved migration
+    load projections by 15%, and Tableau KPI dashboards that projected a 10%
+    cost reduction.
+
+- years: "2019 – 2022"
+  role: Management Consultant
+  org: Lone Peak Data Analytics
+  summary: >-
+    Used k-means clustering to reshape a client's marketing, driving a 45%
+    year-over-year revenue increase.
+
+- years: "2011 – 2019"
+  role: Finance and operations leadership
+  org: Montana State University, Huntsman Cancer Institute, Western Transportation Institute
+  summary: >-
+    Managed a $30M budget and a team of 10, cut payroll costs 30% through
+    planning, and helped win a $100M federal award.
+
