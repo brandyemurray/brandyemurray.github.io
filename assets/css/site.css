@@ -101,7 +101,8 @@ h1, h2, h3 { font-family: var(--display); color: var(--deep); line-height: 1.12;
 .featured { background: var(--deep); color: #E6F0EE; padding: 72px 0 80px; }
 .featured h2 { color: #fff; }
 .featured-image { display: block; border-radius: 14px; overflow: hidden; box-shadow: 0 24px 60px rgba(4, 22, 27, 0.45); }
-.featured-image img { width: 100%; }
+.featured-image img, .featured-image video { width: 100%; display: block; }
+.prose video { width: 100%; max-width: none; border-radius: 10px; border: 1px solid var(--rule); margin: 1.2em 0; }
 .featured-body { display: grid; grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 48px; margin-top: 40px; }
 .featured h3 { font-size: 1.8rem; letter-spacing: -0.015em; margin-bottom: 14px; }
 .featured h3 a { color: #fff; text-decoration: none; }

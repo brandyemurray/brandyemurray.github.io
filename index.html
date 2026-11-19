@@ -49,9 +49,17 @@ image: /img/posts/virtual-care/executive-overview.png
 <section class="featured" id="work">
   <div class="wrap">
     <h2>Latest project</h2>
+    {% if featured.video %}
+    <div class="featured-image">
+      <video controls muted playsinline preload="metadata" poster="{{ featured.image | relative_url }}">
+        <source src="{{ featured.video | relative_url }}" type="video/mp4">
+      </video>
+    </div>
+    {% else %}
     <a class="featured-image" href="{{ featured.url | relative_url }}">
-      <img src="{{ featured.image | relative_url }}" alt="Executive dashboard from the {{ featured.title }} project">
+      <img src="{{ featured.image | relative_url }}" alt="Screenshot from the {{ featured.title }} project">
     </a>
+    {% endif %}
     <div class="featured-body">
       <div>
         <h3><a href="{{ featured.url | relative_url }}">{{ featured.title }}</a></h3>
@@ -66,6 +74,7 @@ image: /img/posts/virtual-care/executive-overview.png
       {% if featured.repo %}<a href="{{ featured.repo }}">See the code on GitHub</a>{% endif %}
       {% if featured.notebook %}<a href="{{ featured.notebook }}">Open the walkthrough notebook</a>{% endif %}
       {% if featured.slides %}<a href="{{ featured.slides | relative_url }}">Flip through the slides (PDF)</a>{% endif %}
+      {% if featured.companion %}<a href="{{ featured.companion | relative_url }}">{{ featured.companion_label }}</a>{% endif %}
     </p>
   </div>
 </section>

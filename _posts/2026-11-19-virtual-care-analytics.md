@@ -1,6 +1,6 @@
 ---
 title: "Virtual Care Analytics: Snowflake to Power BI"
-featured: true
+featured: false
 summary: >-
   A governed healthcare analytics platform built end to end: layered ELT in
   Snowflake, masking and row-level security, data quality checks that catch
