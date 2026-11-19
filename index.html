@@ -2,6 +2,7 @@
 layout: default
 body_class: home
 title: Data and AI platform architect
+image: /img/posts/virtual-care/executive-overview.png
 ---
 {% assign featured = site.posts | where: "featured", true | first %}
 {% assign ds_posts = site.posts | where: "ds_featured", true %}
@@ -49,7 +50,7 @@ title: Data and AI platform architect
   <div class="wrap">
     <h2>Latest project</h2>
     <a class="featured-image" href="{{ featured.url | relative_url }}">
-      <img src="{{ featured.image | prepend: '/img' | relative_url }}" alt="Executive dashboard from the {{ featured.title }} project">
+      <img src="{{ featured.image | relative_url }}" alt="Executive dashboard from the {{ featured.title }} project">
     </a>
     <div class="featured-body">
       <div>
@@ -77,7 +78,7 @@ title: Data and AI platform architect
     {% for post in ds_posts %}
     <li>
       <a class="ds-item" href="{{ post.url | relative_url }}">
-        <img src="{{ post.image | prepend: '/img' | relative_url }}" alt="" loading="lazy">
+        <img src="{{ post.image | relative_url }}" alt="" loading="lazy">
         <span class="ds-text">
           <span class="ds-title">{{ post.title }}</span>
           <span class="ds-excerpt">{{ post.excerpt | strip_html | truncatewords: 32 }}</span>

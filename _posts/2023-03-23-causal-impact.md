@@ -2,7 +2,7 @@
 ds_featured: true
 layout: post
 title: Quantifying Sales Uplift With Causal Impact Analysis
-image: "/posts/causal-impact-title-img.png"
+image: "/img/posts/causal-impact-title-img.png"
 tags: [Causal Impact Analysis, Python]
 ---
 

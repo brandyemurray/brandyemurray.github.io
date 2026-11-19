@@ -16,7 +16,7 @@ body_class: post-page
   </header>
   {% if page.image %}
   <figure class="post-hero">
-    <img src="{{ page.image | prepend: '/img' | relative_url }}" alt="">
+    <img src="{{ page.image | relative_url }}" alt="">
   </figure>
   {% endif %}
   <div class="prose">

@@ -2,7 +2,7 @@
 published: false
 layout: post
 title: Financial Reporting 
-image: "/posts/FinancialReporting.png"
+image: "/img/posts/FinancialReporting.png"
 tags: [PowerBI, Data Analysis]
 ---
 

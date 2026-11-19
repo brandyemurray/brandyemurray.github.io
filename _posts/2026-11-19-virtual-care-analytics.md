@@ -5,7 +5,7 @@ summary: >-
   A governed healthcare analytics platform built end to end: layered ELT in
   Snowflake, masking and row-level security, data quality checks that catch
   every planted problem, and an executive dashboard in Power BI.
-image: "/posts/virtual-care/executive-overview.png"
+image: "/img/posts/virtual-care/executive-overview.png"
 tags: [Snowflake, Power BI, DAX, Data Governance, Data Engineering, Python]
 facts:
   - 45,040 raw rows reconciled to 45,000 clean visits

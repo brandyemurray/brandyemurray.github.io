@@ -2,7 +2,7 @@
 published: false
 layout: post
 title: Adventure Works Dashboard 
-image: "/posts/AdventureWorksDashboard.png"
+image: "/img/posts/AdventureWorksDashboard.png"
 tags: [PowerBI, Data Analysis]
 ---
 
