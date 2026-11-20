@@ -80,6 +80,26 @@ image: /img/posts/virtual-care/executive-overview.png
 </section>
 {% endif %}
 
+{% assign writing = site.posts | where: "kind", "writing" %}
+{% if writing.size > 0 %}
+<section class="writing wrap" id="writing">
+  <h2>Writing</h2>
+  <ul class="ds-list">
+    {% for post in writing limit: 3 %}
+    <li>
+      <a class="ds-item" href="{{ post.url | relative_url }}">
+        <img src="{{ post.image | relative_url }}" alt="" loading="lazy">
+        <span class="ds-text">
+          <span class="ds-title">{{ post.title }}</span>
+          <span class="ds-excerpt">{{ post.summary }}</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+
 <section class="ds wrap" id="data-science">
   <h2>Data science</h2>
   <p class="section-intro">Machine learning projects from my data science training, each written up from business question to result.</p>
