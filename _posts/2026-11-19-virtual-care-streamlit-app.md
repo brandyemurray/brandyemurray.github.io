@@ -1,6 +1,21 @@
 ---
 title: "Virtual Care Analytics: An AI-Ready Streamlit App in Snowflake"
-featured: true
+kind: build
+domain: Virtual care
+pipeline_caption: "The pipeline behind this project, counted at every step."
+pipeline:
+  - stage: Source files
+    count: "45,040"
+    note: rows across six extracts, problems included
+  - stage: Staging
+    count: "45,000"
+    note: visits after 40 duplicates removed and 269 issues flagged
+  - stage: Star schema
+    count: "7"
+    note: governed tables with masking and row-level security
+  - stage: Dashboard
+    count: "6"
+    note: KPIs, every one reconciled back to the source
 summary: >-
   The same governed Snowflake platform as a Streamlit in Snowflake app: KPIs and
   trends, a data quality drill-down, live governance controls, and a chat where

@@ -4,45 +4,36 @@ body_class: home
 title: Data and AI platform architect
 image: /img/posts/virtual-care/executive-overview.png
 ---
-{% assign featured = site.posts | where: "featured", true | first %}
+{% assign builds = site.posts | where: "kind", "build" %}
+{% assign featured = builds | first %}
+{% unless featured %}{% assign featured = site.posts | where: "featured", true | first %}{% endunless %}
 {% assign ds_posts = site.posts | where: "ds_featured", true %}
 
 <section class="hero wrap">
   <div class="hero-text">
     <img class="avatar" src="{{ site.avatar_image | relative_url }}" alt="Brandy Murray" width="88" height="88">
     <h1>I take data from raw to decision&#8209;ready.</h1>
-    <p class="hero-intro">I'm a data and AI platform architect in Helena, Montana. I design governed Snowflake platforms, the semantic layers and AI agents that sit on them, and the dashboards people actually use. I started in finance, wanting to answer the question "why" with data, and I still lead with that question.</p>
+    <p class="hero-intro">I'm a data and AI platform architect in Helena, Montana. I design governed Snowflake platforms, the semantic layers, observability and AI agents that sit on them, and the apps people actually use. I started in finance, wanting to answer the question "why" with data, and I still lead with that question.</p>
     <p class="hero-actions">
       <a class="button button-primary" href="{{ featured.url | relative_url }}">Read my latest case study</a>
       <a class="button" href="{{ site.resume_url | relative_url }}">Download my resume</a>
     </p>
   </div>
 
-  <figure class="lineage" aria-label="Pipeline from my latest project">
+  {% if featured.pipeline %}
+  <figure class="lineage" aria-label="Key numbers from my latest project">
     <ol>
-      <li style="--i:0">
-        <span class="stage">Source files</span>
-        <span class="count">45,040</span>
-        <span class="note">rows across six extracts, problems included</span>
+      {% for step in featured.pipeline %}
+      <li style="--i:{{ forloop.index0 }}">
+        <span class="stage">{{ step.stage }}</span>
+        <span class="count">{{ step.count }}</span>
+        <span class="note">{{ step.note }}</span>
       </li>
-      <li style="--i:1">
-        <span class="stage">Staging</span>
-        <span class="count">45,000</span>
-        <span class="note">visits after 40 duplicates removed and 269 issues flagged</span>
-      </li>
-      <li style="--i:2">
-        <span class="stage">Star schema</span>
-        <span class="count">7</span>
-        <span class="note">governed tables with masking and row-level security</span>
-      </li>
-      <li style="--i:3">
-        <span class="stage">Dashboard</span>
-        <span class="count">6</span>
-        <span class="note">KPIs, every one reconciled back to the source</span>
-      </li>
+      {% endfor %}
     </ol>
-    <figcaption>The pipeline behind my latest project, counted at every step.</figcaption>
+    <figcaption>{{ featured.pipeline_caption | default: "The numbers behind my latest project." }}</figcaption>
   </figure>
+  {% endif %}
 </section>
 
 {% if featured %}
@@ -77,6 +68,28 @@ image: /img/posts/virtual-care/executive-overview.png
       {% if featured.companion %}<a href="{{ featured.companion | relative_url }}">{{ featured.companion_label }}</a>{% endif %}
     </p>
   </div>
+</section>
+{% endif %}
+
+{% if builds.size > 1 %}
+<section class="builds wrap" id="builds">
+  <h2>Weekly builds</h2>
+  <p class="section-intro">A new domain and a new dataset every week, built end to end and written up.</p>
+  <ul class="ds-list">
+    {% for post in builds offset: 1 limit: 6 %}
+    <li>
+      <a class="ds-item" href="{{ post.url | relative_url }}">
+        <img src="{{ post.image | relative_url }}" alt="" loading="lazy">
+        <span class="ds-text">
+          <span class="build-label">{% if post.week %}Week {{ post.week }} · {% endif %}{{ post.domain }}</span>
+          <span class="ds-title">{{ post.title }}</span>
+          <span class="ds-excerpt">{{ post.summary }}</span>
+        </span>
+      </a>
+    </li>
+    {% endfor %}
+  </ul>
+  {% if builds.size > 7 %}<p class="more"><a href="{{ '/projects/' | relative_url }}">See every build</a></p>{% endif %}
 </section>
 {% endif %}
 

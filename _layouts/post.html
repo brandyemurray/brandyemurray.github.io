@@ -14,7 +14,7 @@ body_class: post-page
       {{ minutes }}-minute read{% if page.tags.size > 0 %}. Topics: {{ page.tags | join: ', ' }}{% endif %}
     </p>
   </header>
-  {% if page.image and page.video == nil %}
+  {% if page.image and page.video == nil and page.hide_hero != true %}
   <figure class="post-hero">
     <img src="{{ page.image | relative_url }}" alt="">
   </figure>

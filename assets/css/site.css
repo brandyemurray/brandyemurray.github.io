@@ -222,3 +222,10 @@ h1, h2, h3 { font-family: var(--display); color: var(--deep); line-height: 1.12;
   .skills { grid-template-columns: minmax(0, 1fr); gap: 2px; }
   .skills dd { margin-bottom: 10px; }
 }
+
+/* Weekly builds */
+.builds { padding-top: 72px; }
+.builds h2 { font-size: clamp(1.9rem, 3.4vw, 2.6rem); letter-spacing: -0.02em; margin-bottom: 12px; }
+.build-label { display: block; font: 600 0.9rem/1.3 var(--display); color: var(--teal); margin-bottom: 6px; }
+.archive a.inline { font: inherit; color: var(--teal); }
+.post-head + .prose { margin-top: 36px; }

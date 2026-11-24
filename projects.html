@@ -4,16 +4,41 @@ title: All projects
 permalink: /projects/
 ---
 <h1 class="page-title">All projects</h1>
-<p class="section-intro">Everything I've written up, newest first.</p>
-{% assign years = site.posts | group_by_exp: "p", "p.date | date: '%Y'" %}
-{% for year in years %}
-<h2 class="year">{{ year.name }}</h2>
+
+{% assign builds = site.posts | where: "kind", "build" %}
+{% assign writing = site.posts | where: "kind", "writing" %}
+
+<h2 class="year">Weekly builds</h2>
+<p class="section-intro">A new domain and a new dataset every week, built end to end. Newest first.</p>
 <ul class="archive">
-  {% for post in year.items %}
+  {% for post in builds %}
+  <li>
+    <span class="build-label">{% if post.week %}Week {{ post.week }} · {% endif %}{{ post.domain }} · {{ post.date | date: '%B %-d, %Y' }}</span>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    {% if post.tags.size > 0 %}<span class="archive-tags">{{ post.tags | join: ', ' }}</span>{% endif %}
+    {% if post.companion %}<span class="archive-tags">Also: <a class="inline" href="{{ post.companion | relative_url }}">{{ post.companion_label }}</a></span>{% endif %}
+  </li>
+  {% endfor %}
+</ul>
+
+{% if writing.size > 0 %}
+<h2 class="year">Writing</h2>
+<ul class="archive">
+  {% for post in writing %}
+  <li>
+    <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+    <span class="archive-tags">{{ post.date | date: '%B %-d, %Y' }}</span>
+  </li>
+  {% endfor %}
+</ul>
+{% endif %}
+
+<h2 class="year">Data science and earlier work</h2>
+<ul class="archive">
+  {% for post in site.posts %}{% unless post.kind == "build" or post.kind == "writing" or post.companion_of %}
   <li>
     <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
     {% if post.tags.size > 0 %}<span class="archive-tags">{{ post.tags | join: ', ' }}</span>{% endif %}
   </li>
-  {% endfor %}
+  {% endunless %}{% endfor %}
 </ul>
-{% endfor %}
