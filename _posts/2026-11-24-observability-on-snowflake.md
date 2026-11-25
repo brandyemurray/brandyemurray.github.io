@@ -35,7 +35,7 @@ Fresh snow is the best day of the season for a ski resort, and the worst day for
 
 Everything here is synthetic. The app, the guests and their card numbers (standard test numbers) are all generated.
 
-**Links:** [code on GitHub](https://github.com/brandyemurray/observability-on-snowflake) (it runs in GitHub Codespaces with one command), [Collector configuration](https://github.com/brandyemurray/observability-on-snowflake/blob/main/collector/collector.yaml), [Snowflake scripts](https://github.com/brandyemurray/observability-on-snowflake/tree/main/snowflake), [ops app](https://github.com/brandyemurray/observability-on-snowflake/blob/main/streamlit/ops_app.py).
+**Links:** [the postmortem](/2026/11/25/powder-day-postmortem.html), [code on GitHub](https://github.com/brandyemurray/observability-on-snowflake) (it runs in GitHub Codespaces with one command), [Collector configuration](https://github.com/brandyemurray/observability-on-snowflake/blob/main/collector/collector.yaml), [Snowflake scripts](https://github.com/brandyemurray/observability-on-snowflake/tree/main/snowflake), [ops app](https://github.com/brandyemurray/observability-on-snowflake/blob/main/streamlit/ops_app.py).
 
 ## Start with what has to be true
 
